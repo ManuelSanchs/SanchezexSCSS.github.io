@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+//variables//
+$white:#FFFFFF;
+$purple:#6638F0;
+$gray:#555555;
+$charcoal:#282828;
+$backgroundGray:#EEECF1;
+$gradient:linear-gradient(154.5deg, #6638F0 0%, #5CC9F5 100%);
+
+//mixin//
+@mixin title-text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.87rem;
+}
+
+@mixin content-text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@mixin button-text{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;   
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1 {
+  @include title-text;
+  color:$charcoal;
+  padding-top: 0;
+  margin: 0;
+}
+
+p {
+@include content-text;
+color: $gray;
+}
+
+.btn{
+    @include button-text;
+color: $white;
+text-decoration: none;
+background: $purple;
+border-radius: .25rem;
+padding: .56rem .87rem;
+}
+
+.blue-box{
+width: 23.43rem;
+height: 33.93rem;
+left: 321.56rem;
+top: 15rem;
+background: $gradient;
+}
+.popupOverlay{
+    display: flex;
+    padding:2rem;
+    background-color: $backgroundGray;
+    top:0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    
+    
+}
+
+.popupcontent{
+   background-color: $white;
+   width: 23.56rem;
+   height: 34.06rem;
+   left: 21.5rem;
+   top: 14.93;
+   padding: 2rem;
+   .btn:last-child{
+    background: $white;
+    color: $purple;
+    
+}
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    .main-screen{
+        width: 37.75rem;
+        height: 13.18rem;
+        padding: 2rem;
+        background-color: $backgroundGray;
+    }
+}
+.popupOverlay.active{
+    visibility: visible;
+}
+    

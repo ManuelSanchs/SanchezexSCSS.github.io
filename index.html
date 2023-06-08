@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".open").click(function(){
+    $(".popupOverlay").addClass('active');
+  });
+  $(".open").click(function(){
+    $("main").hide();
+  });
+  $(".close, .popupOverlay").click(function(){
+    $(".popupOverlay").removeClass('active');
+  });
+  $(".close, .popupOverlay").click(function(){
+    $("main").show();
+  });
+});
+</script>
+<title>Manuel Sanchez SCSS Exercise </title>
+</head>
+
+<body>
+	<div class="popupOverlay">
+		<div class="blue-box"></div>
+		<div class="popupcontent">
+			
+			<h1>Ultrices vitae auctor eu augue vitae nunc sed velit dignissim donec ac odio tempor </h1>
+			<p>Elementum sagittis vitae et leo duis ut diam quam. Dolor sit amet consectetur adipiscing elit duis. 
+				At imperdiet dui accumsan sit amet. Sed faucibus turpis in eu mi bibendum neque egestas congue. 
+				Cursus euismod quis viverra nibh cras pulvinar mattis. Viverra suspendisse potenti nullam ac
+				 tortor vitae purus faucibus.</p>
+				 <a href="#" class="btn close">Integer Vitae</a>
+				 <a href="#" class="btn close">Imperdiet Dui</a>
+
+	</div>
+
+
+	</div>
+
+	<main>
+		<div class="main-screen">
+		<h1>Elementum sagittis vitae et leo duis ut diam quam.</h1>
+		<p>Dolor sit amet consectetur adipiscing elit duis.</p>
+		<a href="#" class="btn open">Integer Vitae</a>
+	</div>
+		<div class="graphic">
+			<img src="images/graphic.svg" alt="graphic">
+		</div>
+	</main>
+
+
+</body>
+</html>
